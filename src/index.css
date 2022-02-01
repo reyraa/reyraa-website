@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+}
+
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/*****************
+HEADER
+*****************/
+
+#main-header {
+  width: 100%;
+}
+
+#main-header .container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main-header nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100vw - 100px);
+  height: 100vh;
+  transform: translateX(-100%);
+  background: #fff;
+  z-index: 9999;
+  transition: transform 200ms ease;
+}
+
+#main-header ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#main-header input {
+  position: absolute;
+  visibility: hidden;
+}
+
+#main-header label[for="menu-toggle"] {
+  width: 72px;
+  height: 72px;
+  background-color: red;
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 6;
+  cursor: pointer;
+}
+
+#main-header input:checked ~ nav {
+  transform: translateX(0);
+}
+
+@media (min-width: 480px) {
+  #main-header nav {
+    position: relative;
+    left: initial;
+    top: initial;
+    height: 72px;
+    width: auto;
+    transform: translateX(0);
+  }
+
+  #main-header ul {
+    flex-flow: row nowrap;
+  }
+
+  #main-header label[for="menu-toggle"] {
+    display: none;
+  }
+}
+
+#promotion {
+  height: 200px;
+  width: 100%;
+  background-color: #fef8f2;
+}
+
+#promotion .container {
+  text-align: center;
+}
+
+#promotion h2,
+#promotion p {
+  display: inline-block;
+}
+
+#why-us {
+  width: 100%;
+  background-color: #e5f2f1;
+  background-image: url('./guy.png');
+  background-repeat: no-repeat;
+  background-position-x: calc(50% + 500px);
+}
+
+#why-us main {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#why-us main header,
+#why-us main div {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #why-us main {
+    width: 75%;
+  }
+
+  #why-us main div {
+    width: 50%;
+  }
+}
+
+#how-to {
+  width: 100%;
+  background-color: #fff;
+}
+
+#charity {
+  width: 100%;
+  background-color: #e5f2f1;
+  background-image: url('./treasure.png');
+  background-repeat: no-repeat;
+  background-position-x: calc(50% + 500px);
+}
+
+#contact {
+  height: 300px;
+  width: 100%;
+  background-color: #e7ece6;
+}
+
+#contact .container {
+  text-align: center;
+}
+
+#contact ul {
+  display: flex;
+  flex-flow: column nowrap;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+@media (min-width: 480px) {
+  #contact ul {
+    flex-flow: row nowrap;
+  }
+}
+
+#main-footer {
+  height: 40px;
+  width: 100%;
+  background-color: #005c45;
+}
+

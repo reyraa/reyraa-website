@@ -1,0 +1,23 @@
+{
+  "name": "reyraa-website",
+  "version": "0.1.0",
+  "description": "Reyraa Lisk delegate website",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reyraa/reyraa-website.git"
+  },
+  "keywords": [
+    "lisk",
+    "delegate"
+  ],
+  "author": "haghighatkhah.ali@gmail.com,sinakorhanishirazi@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reyraa/reyraa-website/issues"
+  },
+  "homepage": "https://github.com/reyraa/reyraa-website#readme"
+}
