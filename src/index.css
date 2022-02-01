@@ -41,19 +41,27 @@ HEADER
 
 #main-header {
   width: 100%;
+  height: 72px;
 }
 
 #main-header h1 {
   padding-left: 35px;
-  background: url('./lisk-logo.png');
-  background-size: 30px;
+  background: url('./lisk-logo.svg');
+  background-size: 38px;
   background-repeat: no-repeat;
+  margin: 0;
+  line-height: 72px;
+  background-position-y: 14px;
+  background-position-x: -6px;
+  color: #101c3d;
 }
 
 #main-header h1:after {
   content: 'Lisk Delegate';
   font-size: 12px;
   padding-left: 5px;
+  font-weight: 500;
+  color: #101c3d;
 }
 
 #main-header .container {
@@ -66,9 +74,9 @@ HEADER
 #main-header nav {
   position: absolute;
   left: 0;
-  top: 0;
-  width: calc(100vw - 100px);
-  height: 100vh;
+  top: 72px;
+  width: calc(100% - 72px);
+  height: calc(100vh - 72px);
   transform: translateX(-100%);
   background: #fff;
   z-index: 9999;
@@ -79,6 +87,14 @@ HEADER
   list-style-type: none;
   display: flex;
   flex-flow: column nowrap;
+  margin: 0;
+  padding: 20px;
+}
+
+#main-header ul li {
+  border-bottom: solid 1px #eee;
+  font-size: 1.2rem;
+  padding: 20px 10px;
 }
 
 #main-header input {
@@ -86,16 +102,46 @@ HEADER
   visibility: hidden;
 }
 
-#main-header label[for="menu-toggle"] {
+#main-header .hamburger-menu {
   width: 72px;
   height: 72px;
-  background-color: red;
+  /* background-color: #101c3d; */
   display: block;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 6;
   cursor: pointer;
+}
+
+#main-header .hamburger-menu:before,
+#main-header .hamburger-menu:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 2px;
+  background-color: #101c3d;
+  top: 50%;
+  left: 18px;
+  transition: transform 200ms ease;
+  transform-origin: 68% 50%;
+}
+
+#main-header .hamburger-menu:before {
+  transform: translateY(-5px);
+}
+
+#main-header .hamburger-menu:after {
+  transform: translateY(5px);
+}
+
+#main-header input:checked + .hamburger-menu:before {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+#main-header input:checked + .hamburger-menu:after {
+  transform: translateY(5px) rotate(45deg);
 }
 
 #main-header input:checked ~ nav {
