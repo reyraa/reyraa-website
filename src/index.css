@@ -3,6 +3,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+}
 
 .container {
   width: 100%;
@@ -18,6 +21,19 @@ HEADER
 
 #main-header {
   width: 100%;
+}
+
+#main-header h1 {
+  padding-left: 35px;
+  background: url('./lisk-logo.png');
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+#main-header h1:after {
+  content: 'Lisk Delegate';
+  font-size: 12px;
+  padding-left: 5px;
 }
 
 #main-header .container {
