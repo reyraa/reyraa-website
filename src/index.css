@@ -141,7 +141,6 @@ HEADER
 #main-header .hamburger-menu {
   width: 72px;
   height: 72px;
-  /* background-color: #101c3d; */
   display: block;
   position: fixed;
   right: 0;
@@ -227,18 +226,27 @@ HEADER
 }
 
 #promotion {
-  height: 200px;
   width: 100%;
-  background-color: #fef8f2;
+  background-color: #f7f9fb;
+  border-top: 1px solid rgba(12,21,46,.08);
+  border-bottom: 1px solid rgba(12,21,46,.08);
 }
 
 #promotion .container {
   text-align: center;
+  padding: 50px 0;
 }
 
-#promotion h2,
-#promotion p {
-  display: inline-block;
+#promotion h2 {
+  font-size: 3.4rem;
+  color: #101c3d;
+  margin: 0;
+  line-height: 5rem;
+}
+#promotion h3 {
+  color: #555;
+  font-weight: 400;
+  margin-top: 30px;
 }
 
 #why-us {
