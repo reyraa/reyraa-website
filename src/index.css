@@ -13,6 +13,7 @@ h1, h2 {
 
 h3, h4 {
   font-weight: 500;
+  font-size: calc(1.2625rem + 0.15vw);
 }
 
 h5 {
@@ -22,6 +23,8 @@ h5 {
 p, span, i, label {
   font-weight: 300;
 }
+
+
 
 b {
   font-weight: 400;
@@ -34,6 +37,11 @@ b {
   margin: 0 auto;
   box-sizing: border-box;
 }
+
+.content-space {
+  padding: 4rem;
+}
+
 
 /*****************
 HEADER
@@ -271,12 +279,30 @@ HEADER
 @media (min-width: 768px) {
   #why-us main {
     width: 75%;
+    
   }
+@media (min-width: 1380px) {
+  #why-us main {
+    margin-left: 4rem;
+  } 
+}
 
   #why-us main div {
     width: 50%;
   }
 }
+
+.p-fix {
+    font-size: 1rem;
+    line-height: 24px;
+    width: 90%;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 #how-to {
   width: 100%;
