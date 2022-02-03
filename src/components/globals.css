@@ -1,0 +1,168 @@
+/*****************************************
+Please Read the guide line
+before adding any rules here
+
+# No component specific rule
+This file is intended to solely include
+global/common rules, every rule added here
+must be used at least in 2 different
+components.
+
+# Use-cases
+Rules defined here must be related
+to positioning and visibility or the overall
+behavior of the application e.g. scrolling
+or text selection color.
+
+# Avoid !important
+Please avoid using !important since it will
+result in many compulsory !important usages
+all over the application
+****************************************/
+
+/*****************************************
+Reset
+****************************************/
+:global body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-white);
+}
+:global ::selection {
+  background: var(--color-scampi);
+  color: var(--color-white);
+}
+:global #root {
+  opacity: 1 !important;
+}
+:global ul {
+  list-style-type: none;
+  padding: 0;
+}
+:global .screen {
+  position: relative;
+  z-index: 1;
+}
+:global fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+:global input {
+  font-family: var(--font-family-body);
+  height: 50px;
+  line-height: 50px;
+  border: solid 1px var(--color-scampi);
+  border-radius: var(--border-radius-sm);
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size-body);
+  font-weight: 300;
+
+  &::placeholder {
+    color: var(--color-medium-gray);
+    text-transform: none;
+  }
+}
+:global figure {
+  margin: 0;
+}
+
+/*****************************************
+Box and visibility
+****************************************/
+:global .hidden {
+  position: absolute;
+  visibility: hidden;
+}
+:global .x-padded {
+  padding-left: var(--padding-size-sm);
+  padding-right: var(--padding-size-sm);
+}
+:global .y-padded {
+  padding-top: var(--padding-size-sm);
+  padding-bottom: var(--padding-size-sm);
+}
+:global .xy-padded {
+  padding: var(--padding-size-sm);
+}
+:global .x-2x-padded {
+  padding-left: var(--padding-size-md);
+  padding-right: var(--padding-size-md);
+}
+:global .y-2x-padded {
+  padding-top: var(--padding-size-md);
+  padding-bottom: var(--padding-size-md);
+}
+:global .xy-2x-padded {
+  padding: var(--padding-size-md);
+}
+:global .x-3x-padded {
+  padding-left: var(--padding-size-big);
+  padding-right: var(--padding-size-big);
+}
+:global .y-3x-padded {
+  padding-top: var(--padding-size-big);
+  padding-bottom: var(--padding-size-big);
+}
+:global .xy-3x-padded {
+  padding: var(--padding-size-big);
+}
+
+/*****************************************
+Positions
+****************************************/
+:global .absolute {
+  position: absolute;
+}
+:global .fixed {
+  position: fixed;
+}
+:global .relative {
+  position: relative;
+}
+:global .float-left {
+  float: left;
+}
+:global .float-right {
+  float: right;
+}
+:global .stick-left {
+  left: 0;
+}
+:global .stick-right {
+  right: 0;
+}
+:global .stick-top {
+  top: 0;
+}
+:global .stick-bottom {
+  bottom: 0;
+}
+:global .clear-fix {
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+  }
+}
+
+/*****************************************
+Grid
+****************************************/
+:global .grid {
+  margin-right:  auto;
+  margin-left:  auto;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+
+  @media (--medium-viewport) {
+    margin-right:  auto;
+  }
+
+  @media (--large-viewport) {
+    max-width: 1400px;
+  }
+}

@@ -1,0 +1,87 @@
+/*****************************************
+Please Read the guide line
+before adding any rules here
+# No component specific rule
+This file is intended to solely include
+global/common variables, every rule added here
+must be used at least in 2 different
+components.
+
+# Use-cases
+Try to isolate these variables with another
+variable in the component specific stylesheet
+in order to make component-wide changes
+faster and consistent.
+
+# Avoid rules and mixins
+Please avoid defining any rules here
+In addition, mixins have their own files,
+Please prefer only variables here.
+
+# naming
+variable names should correspond to the
+role of the value not th presentation
+for example, a color name can include
+the css rule it belongs to e.g. color
+or "background-color" and "primary/secondary"
+or "warn/action" instead of "red/green"
+The only exception for this rule is cosmetic color
+naming: moderate-violet, strong-cyan...
+****************************************/
+:root {
+/*****************************************
+Fonts
+****************************************/
+  --font-family-body: 'Rubik', sans-serif;
+  --font-family-heading: 'Rubik', sans-serif;
+  --font-family-fancy: 'Dancing Script', cursive;
+
+  --font-size-h1: 2.27em;
+  --font-size-h2: 2em;
+  --font-size-h3: 1.4em;
+  --font-size-h4: 1.2em;
+  --font-size-h5: 1.1em;
+  --font-size-body: 1em;
+  --font-size-small: 0.85em;
+  --font-size-tiny: 0.5em;
+
+/*****************************************
+Boxing
+****************************************/
+  --padding-size-sm: 15px;
+  --padding-size-md: 27px;
+  --padding-size-big: 35px;
+
+  --border-radius-sm: 5px;
+  --border-radius-md: 9px;
+  --border-radius-big: 13px;
+
+@media (--medium-viewport) {
+  --padding-size-sm: 20px;
+  --padding-size-md: 40px;
+  --padding-size-big: 60px;
+}
+
+/*****************************************
+Colors
+****************************************/
+  --color-scampi: #585ca1;
+  --color-pale-scampi: #efeff6;
+  --color-black: #323236;
+  --color-white: #fff;
+  --color-orange: #FFA409;
+  --color-red: #e2173d;
+  --color-pale-cyan: #f0fbfc;
+  --color-dark-gray: #4a4a4a;
+  --color-medium-gray: #6e6e70; 
+  --color-light-gray: #C1C1C1;
+  --color-pale-gray: #f7f7f8;
+
+}
+/*****************************************
+View ports
+****************************************/
+@custom-media --large-viewport (min-width: 1400px);
+@custom-media --medium-viewport (min-width: 1024px);
+@custom-media --small-viewport (min-width: 768px);
+@custom-media --xSmall-viewport (min-width: 480px);

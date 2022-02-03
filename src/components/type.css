@@ -1,0 +1,174 @@
+/*****************************************
+Please Read the guide line
+before adding any rules here
+
+# No component specific rule
+This file is intended to solely include
+rules defines against tag names and global
+test styling, no component specific rule
+belongs to this file
+
+# Use-case
+Prefer the HTML tag semantically
+but you can use @apply in any rules
+
+# class names
+Prefer no nested rules and also prefer
+using class names with :global to make them
+available application-wide
+****************************************/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+:global body {
+  font-family: var(--font-family-body);
+  font-weight: 300;
+  color: var(--color-dark-gray);
+}
+:global body {
+  font-size: 17px;
+}
+@media (--xSmall-viewport) {
+  :global body {
+    font-size: calc(16px + 2 * ((100vw - 480px) / 544));
+  }
+}
+@media (--medium-viewport) {
+  :global body {
+    font-size: 18px;
+  }
+}
+:global h1,
+:global h2,
+:global h3,
+:global h4 {
+  font-family: var(--font-family-heading);
+}
+
+:global h1,
+:global h2,
+:global h3,
+:global h4 {
+  &.fancy {
+    font-family: var(--font-family-fancy);
+  }
+}
+
+:global h1 {
+  font-size: var(--font-size-h1);
+  line-height: 1.4em;
+  font-weight: 700;
+}
+
+:global h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 400;
+  margin: 0.5em 0;
+}
+
+:global h3 {
+  font-size: var(--font-size-h3);
+  margin: 0.2em 0;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+:global h4 {
+  font-size: var(--font-size-h4);
+  line-height: 1.6em;
+  font-weight: 400;
+}
+
+:global h5 {
+  font-size: var(--font-size-h5);
+  font-weight: 300;
+  line-height: 1.6em;
+  margin: 0.4em 0;
+}
+
+:global h6 {
+  font-size: var(--font-size-body);
+  font-weight: 300;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+:global p,
+:global a,
+:global b,
+:global i,
+:global strong,
+:global span {
+  line-height: 1.6em;
+  color: var(--color-black);
+}
+
+:global b,
+:global strong {
+  font-weight: 700;
+}
+
+:global small {
+  font-size: var(--font-size-small);
+}
+
+:global a {
+  text-decoration: none;
+  color: var(--color-dark-gray);
+}
+/********************
+    font sizes
+********************/
+:global .text-small {
+  font-size: var(--font-size-small);
+}
+
+/********************
+    Colors
+********************/
+:global .text-red {
+  color: var(--color-red);
+}
+:global .text-scampi {
+  color: var(--color-scampi);
+}
+:global .text-white {
+  color: var(--color-white);
+}
+:global .text-light-gray {
+  color: var(--color-light-gray);
+}
+:global .text-medium-gray {
+  color: var(--color-medium-gray);
+}
+:global .text-dark-gray {
+  color: var(--color-black);
+}
+:global .text-black {
+  color: var(--color-dark-gray);
+}
+
+/********************
+    Directions
+********************/
+:global .text-center {
+  text-align: center;
+}
+
+:global .text-justify {
+  text-align: justify;
+}
+
+:global .text-right {
+  text-align: right;
+}
+
+:global .text-left {
+  text-align: left;
+}
+
+:global input,
+:global textarea,
+:global select {
+  font-family: var(--font-size-body);
+}

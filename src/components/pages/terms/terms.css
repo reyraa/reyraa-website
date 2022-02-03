@@ -1,0 +1,8 @@
+.wrapper {
+  width: 100%;
+
+  & h2 {
+    font-size: var(--font-size-h3);
+    padding-top: var(--padding-size-md);
+  }
+}

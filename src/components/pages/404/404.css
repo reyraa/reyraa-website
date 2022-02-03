@@ -1,0 +1,16 @@
+.wrapper {
+  max-width: 500px;
+  height: calc(100vh - 370px);
+
+  & h1 {
+    font-size: calc(1.4 * var(--font-size-h1));
+    margin-bottom: 0;
+  }
+  & h2 {
+    font-weight: 300;
+    margin-top: 0;
+  }
+  & h4 {
+    font-weight: 300;
+  }
+}

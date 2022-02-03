@@ -1,0 +1,45 @@
+.wrapper {
+  height: 75px;
+  width: 100%;
+
+  & .logo {
+    font-size: var(--font-size-h2);
+    font-weight: 700;
+  }
+
+  &.overlay {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    & .logo {
+      color: var(--color-white);
+    }
+  }
+
+  &.inbox {
+    padding-top: 15px;
+
+    & .logo {
+      color: var(--color-dark-gray);
+    }
+  }
+
+  @media (--medium-viewport) {
+    .wrapper {
+      height: 90px;
+    }
+
+    & .logo {
+      font-size: var(--font-size-h1);
+    }
+  }
+
+  @media (--large-viewport) {
+    & .logo {
+      font-size: var(--font-size-h1);
+    }
+  }
+}
+

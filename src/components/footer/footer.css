@@ -1,0 +1,47 @@
+.wrapper {
+  box-sizing: border-box;
+
+  & nav {
+    width: 100%;
+    padding: 20px 0 90px;
+  }
+
+  & a,
+  & span {
+    font-size: var(--font-size-body);
+    color: var(--color-dark-gray);
+    line-height: 30px;
+  }
+
+  & a {
+    cursor: pointer;
+
+    &:hover,
+    &:hover span {
+      color: var(--color-black);
+      font-weight: 400;
+      letter-spacing: -0.25px;
+    }
+  }
+
+  & .spaced {
+    padding-right: var(--padding-size-sm) !important;
+  }
+
+  & .socialMedia {
+    display: inline-block;
+
+    & a {
+      padding: 10px;
+      margin: 0 5px;
+
+      & .text {
+        font-size: 0;
+      }
+    }
+  }
+
+  & .copyRight {
+    display: inline-block;
+  }
+}
