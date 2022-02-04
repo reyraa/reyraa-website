@@ -4,7 +4,15 @@
   "description": "Reyraa Lisk delegate website",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "build": "NODE_ENV=production babel src --out-dir dist --copy-files && webpack -p --progress --config webpack.prod.config.js",
+    "start": "NODE_ENV=production node ./dist/render/server.js",
+    "dev": "NODE_ENV=development babel-node ./src/render/server.js --config-file ./.babelrc",
+    "test": "./node_modules/jest/bin/jest.js --coverage --config=./setupJest.js",
+    "test:watch": "./node_modules/jest/bin/jest.js --watchAll #runs all tests --cache",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "lint:fix": "eslint --fix ./src",
+    "lint": "eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -19,5 +27,56 @@
   "bugs": {
     "url": "https://github.com/reyraa/reyraa-website/issues"
   },
-  "homepage": "https://github.com/reyraa/reyraa-website#readme"
+  "homepage": "https://github.com/reyraa/reyraa-website#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.8.3",
+    "autoprefixer": "^9.7.4",
+    "axios": "^0.19.1",
+    "babel-runtime": "^6.26.0",
+    "css-modules-require-hook": "^4.2.3",
+    "deepmerge": "^4.2.2",
+    "express": "^4.17.1",
+    "precss": "^4.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.1.2",
+    "webpack": "^5.68.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@storybook/react": "^5.3.6",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.0.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.11.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
+    "install": "^0.13.0",
+    "jest": "^24.9.0",
+    "jest-fetch-mock": "^3.0.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-for": "^2.1.1",
+    "postcss-mixins": "^6.2.3",
+    "postcss-nesting": "^7.0.1",
+    "postcss-partial-import": "^4.1.0",
+    "prettier": "^1.19.1",
+    "react-axe": "^3.4.1",
+    "regenerator-runtime": "^0.13.3"
+  }
 }
