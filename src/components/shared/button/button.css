@@ -1,0 +1,41 @@
+.button {
+  line-height: 58px;
+  height: 58px;
+  min-width: 58px;
+  display: inline-block;
+  text-decoration: none;
+  border: solid 4px var(--color-white);
+  padding: 0;
+  font-size: var(--font-size-body);
+  background-color: var(--color-scampi);
+  cursor: pointer;
+  border-radius: var(--border-radius-md);
+  box-sizing: border-box;
+  outline: none;
+  transition: all ease 100ms;
+
+  &[disabled],
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+
+    & span {
+      font-size: 1.6em !important;
+      line-height: 1.9em;
+    }
+  }
+
+  &:active {
+    border-color: var(--color-scampi);
+  }
+}
+
+.icon {
+  font-size: 1.5em !important;
+  line-height: 2em;
+  color: var(--color-white);
+}

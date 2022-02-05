@@ -1,45 +1,185 @@
 .wrapper {
-  height: 75px;
   width: 100%;
+  height: 72px;
 
-  & .logo {
-    font-size: var(--font-size-h2);
-    font-weight: 700;
+  & h1 {
+    padding-left: 35px;
+    background: url('../../assets/images/lisk-logo.svg');
+    background-size: 38px;
+    background-repeat: no-repeat;
+    margin: 0;
+    line-height: 72px;
+    height: 72px;
+    background-position-y: 14px;
+    background-position-x: -6px;
+    color: #101c3d;
+
+    &::after {
+      content: 'Lisk Delegate';
+      font-size: 12px;
+      padding-left: 5px;
+      font-weight: 500;
+      color: #101c3d;
+    }
   }
 
-  &.overlay {
-    z-index: 99;
+  & .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & nav {
     position: absolute;
-    top: 0;
     left: 0;
+    top: 72px;
+    width: calc(100% - 72px);
+    height: calc(100vh - 72px);
+    transform: translateX(-100%);
+    background: #fff;
+    z-index: 9999;
+    transition: transform 200ms ease;
 
-    & .logo {
-      color: var(--color-white);
-    }
-  }
+    & > ul {
+      list-style-type: none;
+      display: flex;
+      flex-flow: column nowrap;
+      margin: 0;
+      padding: 20px;
 
-  &.inbox {
-    padding-top: 15px;
+      & > li {
+        border-bottom: solid 1px #eee;
+        font-size: 1.2rem;
+        min-width: 110px;
+        position: relative;
 
-    & .logo {
-      color: var(--color-dark-gray);
-    }
-  }
+        & > .name {
+          padding: 20px 10px;
+          cursor: pointer;
+          display: inline-block;
+          color: #101c3d;
+          font-weight: 400;
+        }
 
-  @media (--medium-viewport) {
-    .wrapper {
-      height: 90px;
-    }
-
-    & .logo {
-      font-size: var(--font-size-h1);
-    }
-  }
-
-  @media (--large-viewport) {
-    & .logo {
-      font-size: var(--font-size-h1);
+        & > ul {
+          display: none;
+          list-style-type: none;
+          padding: 0;
+          margin-top: -10px;
+        }
+      }
     }
   }
 }
 
+.wrapper nav > ul > li input:checked ~ ul {
+  display: block;
+}
+
+.wrapper nav > ul > li > ul li {
+  border-bottom: dashed 1px #eee;
+}
+
+.wrapper nav > ul > li > ul li:last-child {
+  border-bottom: 0;
+}
+
+.wrapper nav > ul > li > ul li a {
+  padding: 20px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.wrapper input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.wrapper .hamburgerMenu {
+  width: 72px;
+  height: 72px;
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 6;
+  cursor: pointer;
+}
+
+.wrapper .hamburgerMenu:before,
+.wrapper .hamburgerMenu:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 2px;
+  background-color: #101c3d;
+  top: 50%;
+  left: 18px;
+  transition: transform 200ms ease;
+  transform-origin: 68% 50%;
+}
+
+.wrapper .hamburgerMenu:before {
+  transform: translateY(-5px);
+}
+
+.wrapper .hamburgerMenu:after {
+  transform: translateY(5px);
+}
+
+.wrapper input:checked + .hamburgerMenu:before {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.wrapper input:checked + .hamburgerMenu:after {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.wrapper input:checked ~ nav {
+  transform: translateX(0);
+}
+
+@media (min-width: 480px) {
+  .wrapper nav {
+    position: relative;
+    left: initial;
+    top: initial;
+    height: auto;
+    width: auto;
+    transform: translateX(0);
+  }
+
+  .wrapper nav > ul {
+    flex-flow: row nowrap;
+    padding: 0;
+  }
+
+  .wrapper nav > ul > li {
+    margin: 0 0 0 5px;
+    border: 0;
+  }
+
+  .wrapper nav > ul > li > ul {
+    width: 162px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  .wrapper nav > ul > li input:checked ~ ul {
+    display: none;
+  }
+
+  .wrapper nav > ul > li > .name:hover ~ ul {
+    display: block !important;
+  }
+
+  .wrapper label[for="menu-toggle"] {
+    display: none;
+  }
+}

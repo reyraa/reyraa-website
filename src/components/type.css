@@ -97,8 +97,10 @@ available application-wide
 :global a,
 :global b,
 :global i,
+:global a,
 :global strong,
-:global span {
+:global span,
+:global label {
   line-height: 1.6em;
   color: var(--color-black);
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styles from './home.css';
 
 const Home = () => (
@@ -8,10 +7,8 @@ const Home = () => (
   </div>
 );
 
-
-Home.initState = () => () => new Promise<void>((resolve) => {
+Home.initState = () => () => new Promise((resolve) => {
   resolve();
 });
-
 
 export default Home;

@@ -18,10 +18,8 @@ const Error500 = () => (
   </div>
 );
 
-
 Error500.initState = () => () => new Promise((resolve) => {
   resolve();
 });
-
 
 export default Error500;

@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Button } from '../../shared/button';
-import { parseQuery } from '../../../utilities/helpers';
-import { unsubscribe } from '../../../utilities/api/newsletter';
+// import { parseQuery } from '../../../utilities/helpers';
+// import { unsubscribe } from '../../../utilities/api/newsletter';
 import styles from './unsubscribe.css';
 
-const Unsubscribe = ({ history }) => {
-  const params = parseQuery(history.location.search);
-  const [result, setResult] = useState(0);
+const Unsubscribe = () => {
+  const result = 1;
+  // const params = parseQuery(history.location.search);
+  // const [result, setResult] = useState(0);
 
   useEffect(() => {
-    unsubscribe(params.u, params.e, params.n)
-      .then(() => {
-        setResult(1);
-      })
-      .catch(() => {
-        setResult(-1);
-      });
+    // unsubscribe(params.u, params.e, params.n)
+    //   .then(() => {
+    //     setResult(1);
+    //   })
+    //   .catch(() => {
+    //     setResult(-1);
+    //   });
   }, []);
 
   return (
