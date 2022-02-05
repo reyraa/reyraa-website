@@ -1,15 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const { resolve } = require('path');
 // eslint-disable-next-line no-unused-vars
-const { ContextReplacementPlugin } = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssPartialImport = require('postcss-partial-import');
 const postcssMixins = require('postcss-mixins');
 const postcssNesting = require('postcss-nesting');
 const postcssFor = require('postcss-for');
 const postcssCustomMedia = require('postcss-custom-media');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserJSPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
@@ -67,14 +64,15 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              ident: 'postcss',
-              plugins: [
-                postcssPartialImport({}),
-                postcssMixins({}),
-                postcssNesting({}),
-                postcssFor({}),
-                postcssCustomMedia({}),
-              ],
+              postcssOptions: {
+                plugins: [
+                  postcssPartialImport({}),
+                  postcssMixins({}),
+                  postcssNesting({}),
+                  postcssFor({}),
+                  postcssCustomMedia({}),
+                ],
+              },
             },
           },
         ],
@@ -93,15 +91,11 @@ module.exports = {
         },
       },
     },
-    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      disable: false,
-      allChunks: true,
     }),
-    new ContextReplacementPlugin(/moment[/\\]locale$/, /de/),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
     }),

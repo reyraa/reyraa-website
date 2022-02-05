@@ -4,7 +4,7 @@
   "description": "Reyraa Lisk delegate website",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production babel src --out-dir dist --copy-files && webpack -p --progress --config webpack.prod.config.js",
+    "build": "NODE_ENV=production babel src --out-dir dist --copy-files && webpack --config webpack.prod.config.js",
     "start": "NODE_ENV=production node ./dist/render/server.js",
     "dev": "NODE_ENV=development babel-node ./src/render/server.js --config-file ./.babelrc",
     "test": "./node_modules/jest/bin/jest.js --coverage --config=./setupJest.js",
@@ -32,17 +32,24 @@
     "@babel/runtime": "^7.8.3",
     "autoprefixer": "^9.7.4",
     "axios": "^0.19.1",
+    "babel-loader": "^8.2.3",
     "babel-runtime": "^6.26.0",
+    "css-loader": "^6.6.0",
     "css-modules-require-hook": "^4.2.3",
     "deepmerge": "^4.2.2",
+    "eslint-loader": "^4.0.2",
     "express": "^4.17.1",
+    "file-loader": "^6.2.0",
+    "postcss-loader": "^6.2.1",
     "precss": "^4.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
-    "webpack": "^5.68.0"
+    "style-loader": "^3.3.1",
+    "webpack": "^5.68.0",
+    "webpack-bundle-analyzer": "^4.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
@@ -69,7 +76,7 @@
     "install": "^0.13.0",
     "jest": "^24.9.0",
     "jest-fetch-mock": "^3.0.1",
-    "mini-css-extract-plugin": "^0.9.0",
+    "mini-css-extract-plugin": "^2.5.3",
     "postcss-custom-media": "^7.0.8",
     "postcss-for": "^2.1.1",
     "postcss-mixins": "^6.2.3",
@@ -77,6 +84,7 @@
     "postcss-partial-import": "^4.1.0",
     "prettier": "^1.19.1",
     "react-axe": "^3.4.1",
-    "regenerator-runtime": "^0.13.3"
+    "regenerator-runtime": "^0.13.3",
+    "webpack-cli": "^4.9.2"
   }
 }
