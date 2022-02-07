@@ -11,7 +11,7 @@ module.exports = {
   devtool: 'cheap-eval-source-map',
   entry: {
     home: [
-      'webpack-hot-middleware/client',
+      // 'webpack-hot-middleware/client',
       './src/render/clientRender.js',
     ],
   },
@@ -74,6 +74,8 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.NamedModulesPlugin(),
   ],
+  optimization: {
+    moduleIds: 'named',
+  },
 };
