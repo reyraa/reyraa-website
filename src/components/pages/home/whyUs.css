@@ -1,0 +1,76 @@
+.whyUs {
+  width: 100%;
+  background-color: #e5f2f1;
+  /* background-image: url("./guy.png");
+  background-repeat: no-repeat;
+  background-position-x: calc(50% + 500px); */
+
+  & .container {
+    width: 100%;
+    padding: 0 20px;
+    max-width: 1140px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  & .pFix {
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 90%;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+  & main header span {
+    font-size: 0.75rem;
+  }
+
+  & main header {
+    line-height: 20px;
+  }
+
+  & main div h4 {
+    margin: 1rem 0 -5px 0;
+    font-size: calc(1.2625rem + 0.15vw);
+  }
+
+  & main div {
+    box-sizing: border-box;
+    padding-bottom: 2rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .whyUs main div h4 {
+    font-size: 1.375rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .whyUs main {
+    width: 70%;
+    margin-right: 4rem;
+  }
+
+  .whyUs main header {
+    flex: 1 100%;
+  }
+  .whyUs main div {
+    flex: 1 50%;
+  }
+
+  .whyUs main div p {
+    padding-right: 1rem;
+    letter-spacing: 0.7px;
+  }
+}

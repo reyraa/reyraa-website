@@ -1,0 +1,24 @@
+.wrapper {
+  width: 100%;
+  background-color: #f7f9fb;
+  border-top: 1px solid rgba(12, 21, 46, 0.08);
+  border-bottom: 1px solid rgba(12, 21, 46, 0.08);
+
+  & .container {
+    text-align: center !important;
+    padding: 50px 0;
+  }
+
+  & h2 {
+    font-size: 3.4rem;
+    color: #101c3d;
+    margin: 0;
+    line-height: 5rem;
+  }
+
+  & h3 {
+    color: #555;
+    font-weight: 400;
+    margin-top: 30px;
+  }
+}

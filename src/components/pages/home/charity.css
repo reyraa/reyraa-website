@@ -1,0 +1,50 @@
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #e5f2f1;
+  background-image: url("../../../assets/images/treasure.png");
+  background-repeat: no-repeat;
+  background-position-x: calc(50% + 500px);
+
+  & h5 {
+    margin-bottom: 1rem;
+    font-size: 1.125rem !important;
+    color: #51596c;
+  }
+
+  & div {
+    padding-right: 27%;
+  }
+
+  & h3 {
+    margin-top: 1rem;
+  }
+}
+
+.fix {
+  padding-top: 3rem !important;
+  padding-bottom: 1.67rem !important;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  & .pFix {
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 90%;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.text-color-primary {
+  color: #005c45;
+}

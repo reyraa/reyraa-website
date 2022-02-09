@@ -1,9 +1,15 @@
 import React from 'react';
-import styles from './home.css';
+import Charity from './charity';
+import HowTo from './howTo';
+import Promotion from './promotion';
+import WhyUs from './whyUs';
 
 const Home = () => (
-  <div className={`${styles.wrapper} x-padded`}>
-    <h1>Home</h1>
+  <div>
+    <Promotion />
+    <WhyUs />
+    <HowTo />
+    <Charity />
   </div>
 );
 
