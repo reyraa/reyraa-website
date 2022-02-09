@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './howTo.css';
 
 const HowTo = () => (
-  <section id={styles.wrapper}>
-    <div className={`${styles.container}`}>
+  <section className={styles.wrapper}>
+    <div className={styles.container}>
       <header>
         <span>JOIN US</span>
         <h3>How to vote</h3>
