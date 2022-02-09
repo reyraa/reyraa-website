@@ -3,7 +3,7 @@ import styles from './whyUs.css';
 
 const WhyUs = () => (
   <section className={styles.whyUs}>
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.fix}`}>
       <main>
         <header>
           <span>PERKS</span>

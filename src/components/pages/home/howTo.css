@@ -10,6 +10,11 @@
     box-sizing: border-box;
   }
 
+  & .fix {
+    padding-top: 3rem !important;
+    padding-bottom: 1.67rem !important;
+  }
+
   & .step {
     position: relative;
     list-style: none;
@@ -49,12 +54,12 @@
     background-color: #bfbfbf52;
   }
 
-  & .step .active .stepIcon {
+  & .step .active .step-icon {
     color: #fff;
     background-color: #008060;
   }
 
-  & .stepContent {
+  & .step-content {
     flex: 1;
   }
 
@@ -65,5 +70,60 @@
   & .contentSpace2 {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
+  }
+
+  & .pbTwo {
+    padding-bottom: 1rem;
+  }
+}
+
+.customField {
+  margin-top: 15px;
+  position: relative;
+  font-size: 14px;
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
+
+.inputStyle {
+  border: none;
+  appearance: none;
+  background-color: #f2f2f2;
+  padding: 12px;
+  border-radius: 3px;
+  width: 400px;
+  outline: none;
+}
+
+.customField .placeholder {
+  position: absolute;
+  left: 12px;
+  top: calc(50% + 10px);
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: top 0.3 ease, font-size 0.3 ease, color 0.3 ease;
+}
+
+.customField {
+  & input {
+    background: none;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+
+    &:valid,
+    &:focus {
+      border: 2px solid #222;
+      transition-delay: 0.1s;
+
+      & + .placeholder {
+        top: 7px;
+        background: #fff;
+      }
+    }
+
+    & + .placeholder {
+      top: 28px;
+      padding: 0 5px;
+    }
   }
 }

@@ -3,7 +3,7 @@ import styles from './howTo.css';
 
 const HowTo = () => (
   <section className={styles.wrapper}>
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.fix}`}>
       <header>
         <span>JOIN US</span>
         <h3>How to vote</h3>
@@ -26,8 +26,18 @@ const HowTo = () => (
           >
             <span className={styles.stepIcon}>2</span>
             <div className={styles.stepContent}>
-              <h4 className={styles.stepTitle}>Input your public key here</h4>
-              <input type="text" placeholder="Public key" />
+              <h4 className={`${styles.stepTitle} ${styles.pbTwo}`}>
+                Input your public key here
+              </h4>
+              <label className={styles.customField} htmlFor="publickey-input">
+                <input
+                  id="publickey-input"
+                  className={styles.inputStyle}
+                  type="text"
+                  required
+                />
+                <span className={styles.placeholder}>Public key</span>
+              </label>
             </div>
           </div>
         </li>
