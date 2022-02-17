@@ -21,6 +21,7 @@
   & .pFix {
     font-size: 1rem;
     line-height: 1.5;
+    latter-spacing: normal;
     width: 90%;
     display: -webkit-box;
     -webkit-line-clamp: 5;

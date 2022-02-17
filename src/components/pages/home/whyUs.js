@@ -11,37 +11,36 @@ const WhyUs = () => (
         </header>
         <div>
           <i>ICON</i>
-          <h4>Voting Reward</h4>
+          <h4>practical</h4>
           <p className="pFix">
-            Helpinghand pays 60% of forging rewards back to voters, self-vote
-            naturally excluded. Balances of 0.2+ LSK are distributed every 24
-            hours.
+            we monitorise our competitor&#39;s projects then create impressive
+            tools based on user&#39;s wants and lisk features.
           </p>
         </div>
         <div>
           <i>ICON</i>
-          <h4>Statistics</h4>
+          <h4>game</h4>
           <p className="pFix">
-            Stay up-to-date with live detailed pool, voter and charity fund
-            statistics!
+            in future we create game thats more than fun, in ethereum website
+            notes said &#39;games is no longer maintained by developer the items
+            that you collect remain you&#39;,in our game your decisions and
+            connections remain you.
+          </p>
+        </div>
+        <div>
+          <i>icons</i>
+          <h4>tools</h4>
+          <p className="pFix">
+            we focued on lisk app efficency and details to create tools for your
+            comfort, our tools Maintained by an IT professional and Lisk ICO
+            participant
           </p>
         </div>
         <div>
           <i>ICON</i>
-          <h4>Charity Fund</h4>
+          <h4>reword and widespread</h4>
           <p className="pFix">
-            On top of the 60% voting reward, a static 20% of the forging rewards
-            will be reserved to support the less fortunate from around the
-            world. Check our Charity Fund explainer for more information.
-          </p>
-        </div>
-        <div>
-          <i>ICON</i>
-          <h4>Scalable infrastructure</h4>
-          <p className="pFix">
-            Maintained by an IT professional and Lisk ICO participant, we run
-            mainnet and testnet nodes to stay up to date with all the latest
-            Lisk changes and updates.
+            reyraa pays 55% of forging reward back to voters, 30% on.
             {' '}
           </p>
         </div>
