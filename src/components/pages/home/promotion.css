@@ -1,17 +1,33 @@
 .wrapper {
   width: 100%;
-  background-color: #f7f9fb;
+  background-image: url("../../../assets/images/Lisk-sticker-Rick.png");
+  background-repeat: no-repeat;
+  background-position-x: calc(41% + 500px);
+  background-position-y: calc(31% + 10px);
   border-top: 1px solid rgba(12, 21, 46, 0.08);
   border-bottom: 1px solid rgba(12, 21, 46, 0.08);
+  background-size: 400px;
+  background-color: var(--dark-blue);
 
   & .container {
-    text-align: center !important;
-    padding: 50px 0;
+    /* text-align: center !important; */
+    padding: 8rem 2rem;
+    margin: 5rem;
+  }
+  & .colorGreen {
+    color: var(--ufo-green);
+  }
+
+  & .pText {
+    font-size: 14px;
+    light-height: 30;
+    letter-spacing: 0.1px;
+    color: #ffffffa3;
   }
 
   & h2 {
     font-size: 3.4rem;
-    color: #101c3d;
+    color: #ffffff;
     margin: 0;
     line-height: 2rem;
   }

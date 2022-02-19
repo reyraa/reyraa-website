@@ -1,6 +1,6 @@
-import React from 'react';
-import Typed from 'typed.js';
-import styles from './promotion.css';
+import React from "react";
+import Typed from "typed.js";
+import styles from "./promotion.css";
 
 const Promotion = () => {
   const el = React.useRef(null);
@@ -9,14 +9,11 @@ const Promotion = () => {
 
   React.useEffect(() => {
     const options = {
-      strings: [
-        '&quot;fun.&quot;',
-        '&quot;practical.&quot;',
-        '&quot;creative.&quot;',
-        '&quot;widespread.&quot;',
-      ],
+      strings: ["fun", "practical", "creative", "widespread"],
       typeSpeed: 50,
       backSpeed: 50,
+      loop: true,
+      loopCount: Infinity,
     };
 
     // elRef refers to the <span> rendered below
@@ -33,11 +30,11 @@ const Promotion = () => {
       <div className={styles.container}>
         <h2>vote for reyraa to make</h2>
         <h2>
-          lisk more
-          {' '}
-          <span ref={el} />
+          lisk more <span ref={el} className={styles.colorGreen} />
         </h2>
-        <h3>Receive 60% voting reward and be at the helm of good works!</h3>
+        <h3 className={styles.pText}>
+          Receive 50% voting reward and be at the helm of good works!
+        </h3>
       </div>
     </section>
   );
