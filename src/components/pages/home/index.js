@@ -1,5 +1,5 @@
 import React from 'react';
-import Charity from './charity';
+import WideSpread from './wideSpread';
 import HowTo from './howTo';
 import Promotion from './promotion';
 import WhyUs from './whyUs';
@@ -9,7 +9,7 @@ const Home = () => (
     <Promotion />
     <WhyUs />
     <HowTo />
-    <Charity />
+    <WideSpread />
   </div>
 );
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './charity.css';
+import styles from './wideSpread.css';
 
-const Charity = () => (
+const WideSpread = () => (
   <section className={styles.wrapper}>
     <div className={`${styles.container} ${styles.fix}`}>
-      <span>How charity funds are spent</span>
-      <h3 className={styles.textColorPrimary}>Charity Fund</h3>
+      <span>How reword funds are spent</span>
+      <h3 className={styles.textColorPrimary}>WideSpread</h3>
       <h5>
         Delegate helpinghand reserves a minimum of 20% of all forging rewards
         (~500 LSK / month) for the Charity Fund.
@@ -26,4 +26,4 @@ const Charity = () => (
   </section>
 );
 
-export default Charity;
+export default WideSpread;
