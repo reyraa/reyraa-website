@@ -29,12 +29,12 @@ The only exception for this rule is cosmetic color
 naming: moderate-violet, strong-cyan...
 ****************************************/
 :root {
-/*****************************************
+  /*****************************************
 Fonts
 ****************************************/
-  --font-family-body: 'Rubik', sans-serif;
-  --font-family-heading: 'Rubik', sans-serif;
-  --font-family-fancy: 'Dancing Script', cursive;
+  --font-family-body: "Rubik", sans-serif;
+  --font-family-heading: "Rubik", sans-serif;
+  --font-family-fancy: "Dancing Script", cursive;
 
   --font-size-h1: 2.27em;
   --font-size-h2: 2em;
@@ -45,7 +45,7 @@ Fonts
   --font-size-small: 0.85em;
   --font-size-tiny: 0.5em;
 
-/*****************************************
+  /*****************************************
 Boxing
 ****************************************/
   --padding-size-sm: 15px;
@@ -56,28 +56,48 @@ Boxing
   --border-radius-md: 9px;
   --border-radius-big: 13px;
 
-@media (--medium-viewport) {
-  --padding-size-sm: 20px;
-  --padding-size-md: 40px;
-  --padding-size-big: 60px;
-}
+  @media (--medium-viewport) {
+    --padding-size-sm: 20px;
+    --padding-size-md: 40px;
+    --padding-size-big: 60px;
+  }
 
-/*****************************************
+  /*****************************************
 Colors
 ****************************************/
   --color-scampi: #585ca1;
   --color-pale-scampi: #efeff6;
   --color-black: #323236;
   --color-white: #fff;
-  --color-orange: #FFA409;
+  --color-orange: #ffa409;
   --color-red: #e2173d;
   --color-pale-cyan: #f0fbfc;
   --color-dark-gray: #4a4a4a;
-  --color-medium-gray: #6e6e70; 
-  --color-light-gray: #C1C1C1;
+  --color-medium-gray: #6e6e70;
+  --color-light-gray: #c1c1c1;
   --color-pale-gray: #f7f7f8;
 
+  /*****************************************
+variable from lisk
+****************************************/
+  --ufo-green: #2bd67b;
+  --zodiac-blue: #0c152e;
+  --dark-blue: #101c3d;
+  --ink-blue: #254898;
+  --marine-blue: #4070f4;
+  --yellow: #f7e36d;
+  --candy-pink: #ffd0d1;
+  --fury-red: #ff4557;
+  --blue-gray: #c2d2ff;
+  --first-gray: #6c757d;
+  --text-gray: ##ffffffa3;
+  --border-gray: #ffffff5c;
+  --silver-gary: #c5cfe4;
+  --plantium-gray: #dfe6f2;
+  --athens-white: #f7f9fb;
+  --white-fist: #ffffff;
 }
+
 /*****************************************
 View ports
 ****************************************/
